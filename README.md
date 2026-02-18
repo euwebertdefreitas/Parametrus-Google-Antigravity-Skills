@@ -94,3 +94,16 @@ Ative esta habilidade para criar workflows de deploy, otimizar builds lentos, co
 
 **Uso**:
 Ative esta habilidade para desenhar telas, escolher paletas de cores, melhorar fluxos de navegação ou criticar layouts existentes.
+
+### [Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)
+
+**Papel**: Liderança Técnica, Mentor e Estrategista de Engenharia
+
+**Capacidades**:
+- Tomada de Decisão Arquitetural (Build vs Buy, Stack Selection)
+- Definição de Processos de Engenharia (Code Reviews, RFCs, Agile)
+- Gestão de Dívida Técnica e Mentorias
+- Tradução Técnica para Stakeholders (Comunicação)
+
+**Uso**:
+Ative esta habilidade para validar arquiteturas, resolver conflitos técnicos, definir padrões de código ou planejar roadmaps.
