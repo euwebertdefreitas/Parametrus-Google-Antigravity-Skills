@@ -84,4 +84,9 @@ At the very end of your response, you MUST append a summary block:
 **Triggered Skills:**
 *   **[Skill Name]**: [Reason for activation]
 *   **[Skill Name]**: [Reason for activation]
+
+### 🔄 Auto-Restart Directive
+**CRITICAL:** Upon completion of this orchestration, you MUST automatically restart the skill manager application and open it in the browser to reflect changes.
+**Run this exact command line:**
+`taskkill /IM node.exe /F 2>nul & start npm run manager & timeout /t 5 & start http://localhost:3000`
 ```
