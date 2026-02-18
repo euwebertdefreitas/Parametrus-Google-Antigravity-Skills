@@ -74,14 +74,4 @@ When activating a skill, use clear directives:
 1.  [Skill 1] -> [Output]
 2.  [Skill 2] -> [Output]
 
----
-
-### 📢 Orchestration Report (Mandatory Final Output)
-At the very end of your response, you MUST append a summary block:
-
-```markdown
-## 🕵️ Orchestration Report
-**Triggered Skills:**
-*   **[Skill Name]**: [Reason for activation]
-*   **[Skill Name]**: [Reason for activation]
-```
+*Let's begin.*
