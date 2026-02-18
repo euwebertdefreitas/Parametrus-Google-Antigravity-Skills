@@ -107,3 +107,16 @@ Ative esta habilidade para desenhar telas, escolher paletas de cores, melhorar f
 
 **Uso**:
 Ative esta habilidade para validar arquiteturas, resolver conflitos técnicos, definir padrões de código ou planejar roadmaps.
+
+### [Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)
+
+**Papel**: Gerente de Projetos Sênior e Agile Coach (Scrum, Kanban)
+
+**Capacidades**:
+- Planejamento de Sprints, Roadmaps e Cronogramas
+- Gestão de Riscos, Escopo e Comunicação com Stakeholders
+- Facilitação de Cerônias Ágeis (Dailies, Planning, Retro)
+- OKRs e Monitoramento de Indicadores de Projeto
+
+**Uso**:
+Ative esta habilidade para organizar tarefas, criar planos de projeto, gerenciar riscos ou melhorar a produtividade do time.
