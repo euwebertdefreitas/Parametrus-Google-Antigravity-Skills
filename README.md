@@ -133,3 +133,16 @@ Ative esta habilidade para organizar tarefas, criar planos de projeto, gerenciar
 
 **Uso**:
 Ative esta habilidade para definir o "Quê" e o "Porquê" construir, priorizar funcionalidades e alinhar estratégia de negócios.
+
+### [Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)
+
+**Papel**: Engenheiro de Software Principal e Cientista da Computação
+
+**Capacidades**:
+- Design Patterns Avançados (SOLID, GoF) e Refatoração
+- Análise de Complexidade de Algoritmos (Big O) e Estruturas de Dados
+- Sistemas Distribuídos e Otimização de Performance (Concorrência)
+- Segurança de Código e Programação Defensiva (C++, Rust, Java)
+
+**Uso**:
+Ative esta habilidade para resolver problemas de baixo nível, otimizar algoritmos lentos, refatorar código complexo ou desenhar sistemas robustos.
