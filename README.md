@@ -1,7 +1,8 @@
-# Parametrus-Google-Antigravity-Skills
+# Parametrus-AI-Skills
 
 [🇧🇷 Português](#-português-brasil) | [🇺🇸 English](#-english-us) | [🇪🇸 Español](#-español)
 
+> **🚀 General**: This project houses specialized AI Skills.
 > **🚀 Skill Manager App**: Para gerenciar suas skills visualmente, rode `npm run manager` na raiz deste projeto.
 > **🚀 Skill Manager App**: To manage your skills visually, run `npm run manager` in the project root.
 > **🚀 Skill Manager App**: Para gestionar sus habilidades visualmente, ejecute `npm run manager` en la raíz.
@@ -10,7 +11,7 @@
 
 ## 🇧🇷 Português (Brasil)
 
-Bem-vindo ao repositório **Parametrus Antigravity Skills**.
+Bem-vindo ao repositório **Parametrus AI Skills**.
 
 Este projeto fornece uma coleção de **Habilidades de IA (AI Skills)** altamente especializadas, projetadas para transformar qualquer Agente de IA avançado (como Gemini, Claude, ChatGPT) em um especialista de nível sênior em domínios específicos.
 
@@ -90,7 +91,7 @@ Cada "Skill" é um arquivo Markdown contendo:
 
 ## 🇺🇸 English (US)
 
-Welcome to the **Parametrus Antigravity Skills** repository.
+Welcome to the **Parametrus AI Skills** repository.
 
 This project provides a collection of highly specialized **AI Skills**, designed to transform any advanced AI Agent (such as Gemini, Claude, ChatGPT) into a senior-level expert in specific domains.
 
@@ -170,7 +171,7 @@ Each "Skill" is a Markdown file containing:
 
 ## 🇪🇸 Español
 
-Bienvenido al repositorio **Parametrus Antigravity Skills**.
+Bienvenido al repositorio **Parametrus AI Skills**.
 
 Este proyecto proporciona una colección de **Habilidades de IA (AI Skills)** altamente especializadas, diseñadas para transformar cualquier Agente de IA avanzado (como Gemini, Claude, ChatGPT) en un experto de nivel senior en dominios específicos.
 
@@ -196,4 +197,52 @@ Cada "Habilidad" es un archivo Markdown que contiene:
     *   **Rol**: Arquitecto de Sistemas de IA.
     *   **Función**: Crea nuevas habilidades y ecosistemas multi-agente.
 
-*(La lista completa de habilidades técnicas sigue la misma estructura que en inglés/portugués arriba, adaptada al español).*
+#### 💻 Tecnología y Desarrollo
+
+*   **[Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)**: Ciencias de la Computación, Algoritmos y Patrones de Diseño.
+*   **[Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)**: React, Vue, CSS, A11y, Web Vitals.
+*   **[Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)**: APIs, Microservicios, Node.js, Go, Python.
+*   **[Database Expert Pro](./skills/database_expert_pro/SKILL.md)**: SQL, NoSQL, Modelado, Tuning.
+*   **[Git Expert Pro](./skills/git_expert_pro/SKILL.md)**: Control de Versiones, Git Flow, Resolución de Conflictos.
+*   **[CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)**: DevOps, GitHub Actions, Pipelines.
+*   **[Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)**: Liderazgo, Arquitectura, Mentoría.
+*   **[Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)**: Auditoría de Código, Clean Code, Seguridad.
+*   **[MCP Expert Pro](./skills/mcp_expert_pro/SKILL.md)**: Protocolo de Contexto de Modelo e Integración de Herramientas.
+*   **[Browser Automation Expert Pro](./skills/browser_automation_expert_pro/SKILL.md)**: Web Scraping, Puppeteer.
+*   **[Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)**: Requisitos, UML/BPMN.
+*   **[Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)**: Soporte Nivel 3, Análisis de Logs.
+*   **[Network & Infrastructure Expert Pro](./skills/network_infra_expert_pro/SKILL.md)**: Redes, DNS, TCP/IP, Nube.
+
+#### 📊 Datos y Analítica
+
+*   **[Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)**: ML, Estadística, Python/R.
+*   **[Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)**: BI, SQL Avanzado, Visualización de Datos.
+*   **[Spreadsheet Expert Pro](./skills/spreadsheet_expert_pro/SKILL.md)**: Excel Avanzado, Macros, Fórmulas.
+
+#### 💼 Negocios y Gestión
+
+*   **[Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)**: Visión de Producto, RICE, Métricas.
+*   **[Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)**: Agile, Scrum, Gestión de Riesgos.
+*   **[Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)**: Valoración, Modelado Financiero.
+*   **[Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)**: Contabilidad, Balances, Impuestos.
+
+#### 📣 Marketing y Diseño
+
+*   **[UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)**: Diseño de Interfaz, Figma, Investigación de Usuarios.
+*   **[SEO Expert Pro](./skills/seo_expert_pro/SKILL.md)**: Optimización de Búsqueda, Auditoría Técnica.
+*   **[Paid Traffic Expert Pro](./skills/paid_traffic_expert_pro/SKILL.md)**: Gestión de Anuncios (Google/Meta).
+*   **[Copywriting Expert Pro](./skills/copywriting_expert_pro/SKILL.md)**: Escritura Persuasiva.
+
+#### 🏥 Salud y Especialidades
+
+*   **[Medical Expert Pro (Doctor)](./skills/medical_expert_pro/SKILL.md)**: Medicina Clínica, Diagnóstico.
+*   **[Nursing Expert Pro](./skills/nursing_expert_pro/SKILL.md)**: Enfermería, Cuidado del Paciente.
+*   **[Pharmaceutical Expert Pro](./skills/pharmaceutical_expert_pro/SKILL.md)**: Farmacia Clínica, Medicamentos.
+*   **[Philips Tasy EMR Expert Pro](./skills/philips_tasy_expert_pro/SKILL.md)**: Especialista en Sistema Tasy EMR.
+
+#### 📝 Documentos e Idiomas
+
+*   **[PDF Expert Pro](./skills/pdf_expert_pro/SKILL.md)**: Manipulación y Análisis de PDF.
+*   **[Document Expert Pro](./skills/document_expert_pro/SKILL.md)**: Procesamiento de Word/Docx.
+*   **[English (US) Expert Pro](./skills/english_us_expert_pro/SKILL.md)**: Edición en Inglés Nativo.
+*   **[Portuguese (BR) Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)**: Edición en Portugués Nativo.
