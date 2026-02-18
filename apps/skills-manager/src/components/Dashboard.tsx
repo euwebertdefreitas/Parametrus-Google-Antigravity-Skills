@@ -117,8 +117,8 @@ export function Dashboard({
                         key={p}
                         onClick={() => setProvider(p)}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${provider === p
-                                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105'
-                                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105'
+                            : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
                             }`}
                     >
                         {t.providers?.[p] || p}
@@ -216,7 +216,7 @@ export function Dashboard({
                                 </div>
                             </motion.div>
                         )
-                    }}
+                    })}
                 </AnimatePresence>
             </div>
 
