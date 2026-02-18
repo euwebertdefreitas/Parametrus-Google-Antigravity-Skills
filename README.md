@@ -6,7 +6,7 @@ Este repositório abriga Habilidades Antigravity avançadas, projetadas para aut
 
 ### [Skill Forge Enterprise ULTRA MAX](./skills/skill_forge_enterprise_ultra_max/SKILL.md)
 
-**Papel**: Meta-Habilidade Empresarial Suprema (SkillOS)
+**Papel**: Meta-Habilidade Empresarial Suprema (SkillS)
 
 **Capacidades**:
 - Geração Autônoma de Ecossistema de Habilidades
@@ -16,3 +16,16 @@ Este repositório abriga Habilidades Antigravity avançadas, projetadas para aut
 
 **Uso**:
 Ative esta habilidade quando precisar projetar e implementar sistemas complexos, ecossistemas de agentes ou plataformas empresariais a partir de prompts mínimos.
+
+### [Database Expert Pro](./skills/database_expert_pro/SKILL.md)
+
+**Papel**: Especialista de Banco de Dados de Elite (DBRE/Architect)
+
+**Capacidades**:
+- Design e Modelagem (SQL, NoSQL, ERD)
+- Otimização de Performance e Queries Complexas
+- Administração, Segurança e Migração (ETL)
+- Tuning de Índices e Troubleshooting
+
+**Uso**:
+Ative esta habilidade para desenhar esquemas, corrigir queries lentas, planejar migrações ou auditar a segurança do seu banco de dados.
