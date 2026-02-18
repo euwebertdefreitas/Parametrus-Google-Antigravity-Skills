@@ -4,7 +4,7 @@ Este repositório abriga Habilidades Antigravity avançadas, projetadas para aut
 
 ## Habilidades Disponíveis
 
-### [Skill Forge Enterprise ULTRA MAX](./skills/skill_forge_enterprise_ultra_max/SKILL.md)
+### [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
 
 **Papel**: Meta-Habilidade Empresarial Suprema (SkillS)
 
