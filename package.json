@@ -1,0 +1,16 @@
+{
+  "name": "antigravity-skills-repo",
+  "version": "1.0.0",
+  "description": "Enterprise Grade Antigravity Skills for Google Deepmind.",
+  "scripts": {
+    "manager": "cd apps/skills-manager && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "skills",
+    "ai",
+    "antigravity"
+  ],
+  "author": "Google Deepmind",
+  "license": "MIT"
+}
