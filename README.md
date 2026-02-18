@@ -17,6 +17,10 @@ Para ativar uma skill, você pode solicitar explicitamente (ex: "Atue como o Dat
 
 ### Lista de Habilidades
 
+### [Orchestrator Expert Pro (Líder)](./skills/orchestrator_expert_pro/SKILL.md)
+**Papel**: Orquestrador e Chefe de Equipe
+**Capacidades**: Análise de Intenção, Seleção de Especialistas, Definição de Workflows Complexos (Pipeline), Supervisão.
+
 #### 1. [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
 *   **Papel:** Meta-Habilidade para criação de ecossistemas de agentes.
 *   **Capacidades:** Gera arquiteturas completas de multi-agentes, governança, e documentação de novos sistemas.
@@ -175,6 +179,11 @@ This repository houses advanced **Antigravity Skills**, designed to transform yo
 To activate a skill, you can explicitly request it (e.g., "Act as the Database Expert") or ask a complex domain-specific question.
 
 ### Skills List
+
+#### 0. [Orchestrator Expert Pro (Leader)](./skills/orchestrator_expert_pro/SKILL.md)
+*   **Role:** Squad Leader and Master Planner.
+*   **Capabilities:** Intent Analysis, Expert Selection, Workflow Orchestration.
+*   **Usage:** "Plan and execute a complex project using your team."
 
 #### 1. [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
 *   **Role:** Meta-Skill for agent ecosystem creation.
