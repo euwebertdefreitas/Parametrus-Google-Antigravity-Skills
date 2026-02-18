@@ -159,3 +159,16 @@ Ative esta habilidade para resolver problemas de baixo nível, otimizar algoritm
 
 **Uso**:
 Ative esta habilidade para analisar tendências, criar modelos de previsão, limpar datasets ou validar experimentos estatísticos.
+
+### [Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)
+
+**Papel**: Analista de Dados Sênior e Especialista em Business Intelligence (BI)
+
+**Capacidades**:
+- Query Avançada (SQL CTEs, Windows Functions) para Insights de Negócio
+- Criação e Interpretação de Dashboards (PowerBI, Looker, Tableau)
+- Definição de KPIs (LTV, Churn, CAC) e Storytelling com Dados
+- Análise de Causas Raíz e Tendências de Mercado
+
+**Uso**:
+Ative esta habilidade para responder perguntas de negócio ("Por que caiu a receita?"), criar relatórios ou otimizar queries SQL complexas.
