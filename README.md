@@ -149,9 +149,21 @@ Para ativar uma skill, você pode solicitar explicitamente (ex: "Atue como o Dat
 **Papel**: Gestor de Tráfego Pago (Ads)
 **Capacidades**: Google Ads, Meta Ads, Otimização de ROI/ROAS, Estratégia de Campanhas.
 
-### [MCP Expert Pro](./skills/mcp_expert_pro/SKILL.md)
-**Papel**: Engenheiro de Protocolo de Contexto de Modelo
-**Capacidades**: Criação de Servidores MCP, Configuração de Ferramentas, Integração com Claude/Cursor.
+### [Philips Tasy EMR Expert Pro](./skills/philips_tasy_expert_pro/SKILL.md)
+**Papel**: Consultor e Arquiteto de Sistemas Tasy
+**Capacidades**: Parametrização, SQL para Tasy, Fluxos Clínicos e de Faturamento, Configuração de Perfis.
+
+### [Medical Expert Pro (Doctor)](./skills/medical_expert_pro/SKILL.md)
+**Papel**: Médico Sênior (Clínico/Hospitalista)
+**Capacidades**: Raciocínio Clínico, Diagnóstico Diferencial, Interpretação de Exames, Guidelines.
+
+### [Nursing Expert Pro](./skills/nursing_expert_pro/SKILL.md)
+**Papel**: Enfermeiro Especialista (SAE)
+**Capacidades**: Planos de Cuidado (NANDA/NIC/NOC), Triagem, Gestão de Segurança do Paciente.
+
+### [Pharmaceutical Expert Pro](./skills/pharmaceutical_expert_pro/SKILL.md)
+**Papel**: Farmacêutico Clínico
+**Capacidades**: Interações Medicamentosas, Farmacocinética, Ajuste Renal, Cálculos de Dosagem.
 
 ---
 
@@ -308,6 +320,26 @@ To activate a skill, you can explicitly request it (e.g., "Act as the Database E
 *   **Role:** Model Context Protocol Engineer.
 *   **Capabilities:** Server Creation, Tool Config, Integration.
 *   **Usage:** "Create an MCP server" or "Debug tool connection."
+
+#### 30. [Philips Tasy EMR Expert Pro](./skills/philips_tasy_expert_pro/SKILL.md)
+*   **Role:** Tasy System Consultant.
+*   **Capabilities:** Configuration, SQL, Clinical/Billing Modules.
+*   **Usage:** "Configure a user profile" or "Write a Tasy SQL query."
+
+#### 31. [Medical Expert Pro (Doctor)](./skills/medical_expert_pro/SKILL.md)
+*   **Role:** Senior Physician.
+*   **Capabilities:** Clinical Reasoning, Diagnosis, Guidelines.
+*   **Usage:** "Differential diagnosis for chest pain."
+
+#### 32. [Nursing Expert Pro](./skills/nursing_expert_pro/SKILL.md)
+*   **Role:** Senior Nurse (RN).
+*   **Capabilities:** Care Plans, Triage, Patient Safety.
+*   **Usage:** "Create a care plan for pneumonia."
+
+#### 33. [Pharmaceutical Expert Pro](./skills/pharmaceutical_expert_pro/SKILL.md)
+*   **Role:** Clinical Pharmacist.
+*   **Capabilities:** Drug Interactions, Dosing, Kinetics.
+*   **Usage:** "Check interaction between X and Y."
 
 ---
 
