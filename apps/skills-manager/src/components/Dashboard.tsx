@@ -24,21 +24,21 @@ type Skill = {
 
 type Provider = 'antigravity' | 'anthropic' | 'openai';
 
-function StatusBadge({ status, label }: { status: InstallStatus, label: string }) {
+function StatusBadge({ status, label, t }: { status: InstallStatus, label: string, t: any }) {
     if (!status.installed) return null;
 
     if (status.valid) {
         return (
             <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-full border border-emerald-100 dark:border-emerald-800">
                 <CheckCircle className="w-3 h-3" />
-                <span>{label}: Operational</span>
+                <span>{label}: {t.status.operational}</span>
             </div>
         );
     } else {
         return (
             <div className="flex items-center gap-1.5 text-xs font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/30 px-2 py-1 rounded-full border border-red-100 dark:border-red-800">
                 <AlertCircle className="w-3 h-3" />
-                <span>{label}: Corrupted</span>
+                <span>{label}: {t.status.corrupted}</span>
             </div>
         );
     }
@@ -53,7 +53,7 @@ export function Dashboard({
     const [query, setQuery] = useState('');
     const [provider, setProvider] = useState<Provider>('antigravity');
     const [isPending, startTransition] = useTransition();
-    const { t } = useLanguage();
+    const { t } = useLanguage(); // This hook triggers re-renders on language change
 
     const filtered = skills.filter(s =>
         s.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -96,8 +96,6 @@ export function Dashboard({
                 // Rollback
                 setSkills(prev => prev.map(s => {
                     if (s.id === skillId) {
-                        // Revert logic would be complex without deep clone or reload, simplified for demo:
-                        // Ideally we re-fetch from server here.
                         console.error('Failed, please refresh');
                         return s;
                     }
@@ -166,10 +164,10 @@ export function Dashboard({
                                         {isAnyInstalled && <FileCheck className="w-5 h-5 text-cyan-500" />}
                                     </div>
 
-                                    {/* Status Badges */}
+                                    {/* Status Badges - NOW USING TRANSLATIONS */}
                                     <div className="flex gap-2 mb-4 flex-wrap">
-                                        {status?.global.installed && <StatusBadge status={status.global} label="Global" />}
-                                        {status?.workspace.installed && <StatusBadge status={status.workspace} label="Workspace" />}
+                                        {status?.global.installed && <StatusBadge status={status.global} label={t.global} t={t} />}
+                                        {status?.workspace.installed && <StatusBadge status={status.workspace} label={t.workspace} t={t} />}
                                     </div>
 
                                     <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
