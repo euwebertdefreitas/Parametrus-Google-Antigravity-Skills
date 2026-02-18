@@ -103,3 +103,24 @@ export async function uninstallSkill(skillId: string, location: 'global' | 'work
     }
     return { success: true };
 }
+
+export async function installAllSkills(location: 'global' | 'workspace', provider: string) {
+    const dirs = await fs.readdir(SKILLS_ROOT);
+    for (const skillId of dirs) {
+        const skillPath = path.join(SKILLS_ROOT, skillId, 'SKILL.md');
+        if (fs.existsSync(skillPath)) {
+            await installSkill(skillId, location, provider);
+        }
+    }
+    return { success: true };
+}
+
+export async function uninstallAllSkills(location: 'global' | 'workspace', provider: string) {
+    const providerPath = PROVIDER_PATHS[provider];
+    const targetRoot = location === 'global' ? providerPath.global : providerPath.workspace;
+
+    if (fs.existsSync(targetRoot)) {
+        await fs.emptyDir(targetRoot);
+    }
+    return { success: true };
+}
