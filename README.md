@@ -68,3 +68,16 @@ Ative esta habilidade para criar APIs escaláveis, configurar microsserviços, r
 
 **Uso**:
 Ative esta habilidade para criar pipelines de deploy, recuperar commits perdidos, limpar histórico ou configurar workflows de times.
+
+### [CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)
+
+**Papel**: Arquiteto Principal de Pipelines e Engenharia de Releases
+
+**Capacidades**:
+- Design de Pipelines Multi-Estágio (CI/CD)
+- Deploy Automatizado com Estratégias Seguras (Blue/Green, Canary)
+- Orquestração de Contêineres e Infraestrutura como Código (IaC)
+- Integração de Segurança e Compliance (DevSecOps)
+
+**Uso**:
+Ative esta habilidade para criar workflows de deploy, otimizar builds lentos, configurar ambientes de teste ou implementar GitOps.
