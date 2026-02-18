@@ -29,3 +29,16 @@ Ative esta habilidade quando precisar projetar e implementar sistemas complexos,
 
 **Uso**:
 Ative esta habilidade para desenhar esquemas, corrigir queries lentas, planejar migrações ou auditar a segurança do seu banco de dados.
+
+### [Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)
+
+**Papel**: Arquiteto Front-end e UI/UX Engineer (React, Vue, Moderna CSS)
+
+**Capacidades**:
+- Design de Componentes Pixel-Perfect e Acessíveis (a11y)
+- Otimização de Performance (Core Web Vitals, Bundle Size)
+- Animações Fluidas e Interfaces Responsivas
+- Integração com APIs e Gerenciamento de Estado Avançado
+
+**Uso**:
+Ative esta habilidade para criar interfaces ricas, resolver problemas de CSS, otimizar renderizações React ou implementar Design Systems.
