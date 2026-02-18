@@ -42,3 +42,16 @@ Ative esta habilidade para desenhar esquemas, corrigir queries lentas, planejar 
 
 **Uso**:
 Ative esta habilidade para criar interfaces ricas, resolver problemas de CSS, otimizar renderizações React ou implementar Design Systems.
+
+### [Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)
+
+**Papel**: Engenheiro Principal de Backend e Arquiteto de Sistemas (Node.js, Python, Go)
+
+**Capacidades**:
+- Design de APIs Seguras (REST, GraphQL, gRPC)
+- Arquitetura de Microsserviços e Event-Driven
+- Implementação de Autenticação/Autorização (OAuth2, JWT)
+- Otimização de Servidores e Infraestrutura (Docker, K8s)
+
+**Uso**:
+Ative esta habilidade para criar APIs escaláveis, configurar microsserviços, resolver problemas de concorrência ou planejar infraestrutura.
