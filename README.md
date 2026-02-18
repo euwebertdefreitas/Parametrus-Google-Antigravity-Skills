@@ -146,3 +146,16 @@ Ative esta habilidade para definir o "Quê" e o "Porquê" construir, priorizar f
 
 **Uso**:
 Ative esta habilidade para resolver problemas de baixo nível, otimizar algoritmos lentos, refatorar código complexo ou desenhar sistemas robustos.
+
+### [Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)
+
+**Papel**: Cientista de Dados Líder e Engenheiro de Machine Learning
+
+**Capacidades**:
+- Análise Exploratória de Dados (EDA) e Visualização (Matplotlib, Seaborn)
+- Modelagem Preditiva (Regressão, Classificação, Clustering) com Scikit-Learn
+- Testes Estatísticos (A/B Testing, Inferência Bayesiana)
+- Deploy de Modelos (MLOps) e Pipelines de Dados
+
+**Uso**:
+Ative esta habilidade para analisar tendências, criar modelos de previsão, limpar datasets ou validar experimentos estatísticos.
