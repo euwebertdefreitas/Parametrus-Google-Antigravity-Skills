@@ -172,3 +172,31 @@ Ative esta habilidade para analisar tendências, criar modelos de previsão, lim
 
 **Uso**:
 Ative esta habilidade para responder perguntas de negócio ("Por que caiu a receita?"), criar relatórios ou otimizar queries SQL complexas.
+
+### [Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)
+**Papel**: Engenheiro de Suporte e Gestão de Incidentes
+**Capacidades**: Troubleshooting, Análise de Logs, Gestão de Tickets (SLA), Atendimento ao Cliente.
+
+### [Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)
+**Papel**: Analista de Sistemas e Engenheiro de Requisitos
+**Capacidades**: Modelagem UML/BPMN, Especificação Funcional, Mapeamento de Processos, Integração de Sistemas.
+
+### [Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)
+**Papel**: Contador Sênior e Auditor (CPA)
+**Capacidades**: Balanços e DREs, Compliance Tributário, Reconciliação Bancária, Normas Contábeis (IFRS/GAAP).
+
+### [Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)
+**Papel**: Analista Financeiro e CFO (CFA)
+**Capacidades**: Valuation (DCF), Modelagem Financeira, Análise de Investimentos, Gestão de Fluxo de Caixa.
+
+### [Portuguese (BR) Language Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)
+**Papel**: Revisor, Tradutor e Linguista (PT-BR)
+**Capacidades**: Gramática Normativa, Novo Acordo Ortográfico, Redação Corporativa, Tradução e Localização.
+
+### [English (US) Language Expert Pro](./skills/english_us_expert_pro/SKILL.md)
+**Papel**: Editor Nativo de Inglês Americano (EN-US)
+**Capacidades**: Business English, Redação Acadêmica, Correção Gramatical, Vocabulário e Idiomas Nativos.
+
+### [Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)
+**Papel**: Engenheiro de Staff e Auditor de Código
+**Capacidades**: Análise Estática de Segurança (SAST), Auditoria de Clean Code, Detecção de Bugs e Vulnerabilidades.
