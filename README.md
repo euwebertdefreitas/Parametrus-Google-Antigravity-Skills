@@ -120,3 +120,16 @@ Ative esta habilidade para validar arquiteturas, resolver conflitos técnicos, d
 
 **Uso**:
 Ative esta habilidade para organizar tarefas, criar planos de projeto, gerenciar riscos ou melhorar a produtividade do time.
+
+### [Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)
+
+**Papel**: Gerente de Produto e Estrategista (PM)
+
+**Capacidades**:
+- Definição de Visão de Produto, MVP e Métricas de Sucesso (KPIs)
+- Escrita de Histórias de Usuário (User Stories) e PRDs
+- Priorização de Backlog (RICE, Kano) e Validação de Hipóteses
+- Análise de Mercado (Competidores) e Feedback de Usuário
+
+**Uso**:
+Ative esta habilidade para definir o "Quê" e o "Porquê" construir, priorizar funcionalidades e alinhar estratégia de negócios.
