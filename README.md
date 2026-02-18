@@ -81,3 +81,16 @@ Ative esta habilidade para criar pipelines de deploy, recuperar commits perdidos
 
 **Uso**:
 Ative esta habilidade para criar workflows de deploy, otimizar builds lentos, configurar ambientes de teste ou implementar GitOps.
+
+### [UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)
+
+**Papel**: Designer de Interface Digital e Pesquisador de Experiência do Usuário (UI/UX)
+
+**Capacidades**:
+- Design de Interfaces Modernas, Limpas e Intuitivas (Figma, Adobe XD)
+- Pesquisa de Usuário (User Journey, Personas, Usability Testing)
+- Prototipagem de Alta Fidelidade e Wireframing
+- Auditoria de Acessibilidade (WCAG) e Design Systems
+
+**Uso**:
+Ative esta habilidade para desenhar telas, escolher paletas de cores, melhorar fluxos de navegação ou criticar layouts existentes.
