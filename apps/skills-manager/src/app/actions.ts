@@ -14,7 +14,7 @@ const HOME_DIR = os.homedir();
 const PROVIDER_PATHS: Record<string, { global: string; workspace: string }> = {
     antigravity: {
         global: path.join(HOME_DIR, '.antigravity/skills'),
-        workspace: path.join(WORKSPACE_ROOT, 'skills/antigravity'),
+        workspace: path.join(WORKSPACE_ROOT, 'skills'), // Antigravity legacy path
     },
     anthropic: {
         global: path.join(HOME_DIR, '.anthropic/skills'),
@@ -26,9 +26,10 @@ const PROVIDER_PATHS: Record<string, { global: string; workspace: string }> = {
     }
 };
 
-// Default fallback for legacy compatibility (Antigravity assumes .agent/skills directly without subfolder usually, but let's standardize)
-// Actually, to not break existing Antigravity installation, let's map it correctly based on previous setup:
-PROVIDER_PATHS.antigravity.workspace = path.join(process.cwd(), '../../.agent/skills');
+type InstallStatus = {
+    global: { installed: boolean; valid: boolean; lastModified: string | null };
+    workspace: { installed: boolean; valid: boolean; lastModified: string | null };
+};
 
 export async function getSkills() {
     const dirs = await fs.readdir(SKILLS_ROOT);
@@ -42,12 +43,26 @@ export async function getSkills() {
         const { data } = matter(content);
 
         // Check installation status for ALL providers
-        const installedStatus: Record<string, { global: boolean; workspace: boolean }> = {};
+        const installedStatus: Record<string, InstallStatus> = {};
 
         for (const [provider, paths] of Object.entries(PROVIDER_PATHS)) {
+            const checkPath = async (p: string) => {
+                const fullPath = path.join(p, dir, 'SKILL.md');
+                const exists = fs.existsSync(fullPath);
+                let valid = false;
+                let lastModified = null;
+
+                if (exists) {
+                    const stats = await fs.stat(fullPath);
+                    valid = stats.size > 0; // Basic validity check
+                    lastModified = stats.mtime.toISOString();
+                }
+                return { installed: exists, valid, lastModified };
+            };
+
             installedStatus[provider] = {
-                global: fs.existsSync(path.join(paths.global, dir)),
-                workspace: fs.existsSync(path.join(paths.workspace, dir)),
+                global: await checkPath(paths.global),
+                workspace: await checkPath(paths.workspace),
             };
         }
 
@@ -55,7 +70,7 @@ export async function getSkills() {
             id: dir,
             name: data.name || dir,
             description: data.description || 'No description.',
-            installed: installedStatus
+            providerStatus: installedStatus // New richer status
         });
     }
     return results;

@@ -20,6 +20,13 @@ export const translations = {
             antigravity: "Gemini Antigravity",
             anthropic: "Anthropic Claude",
             openai: "OpenAI ChatGPT"
+        },
+        status: {
+            title: "Status",
+            operational: "Operational",
+            missing: "Not Installed",
+            corrupted: "Corrupted/Empty",
+            clickToInstall: "Click to install"
         }
     },
     pt: {
@@ -41,6 +48,13 @@ export const translations = {
             antigravity: "Gemini Antigravity",
             anthropic: "Anthropic Claude",
             openai: "OpenAI ChatGPT"
+        },
+        status: {
+            title: "Status",
+            operational: "Operacional",
+            missing: "Não Instalado",
+            corrupted: "Corrompido/Vazio",
+            clickToInstall: "Clique para instalar"
         }
     },
     es: {
@@ -62,6 +76,13 @@ export const translations = {
             antigravity: "Gemini Antigravity",
             anthropic: "Anthropic Claude",
             openai: "OpenAI ChatGPT"
+        },
+        status: {
+            title: "Estado",
+            operational: "Operacional",
+            missing: "No Instalado",
+            corrupted: "Corrupto/Vacío",
+            clickToInstall: "Haga clic para instalar"
         }
     }
 };
