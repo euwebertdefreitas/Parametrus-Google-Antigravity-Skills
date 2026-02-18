@@ -117,6 +117,42 @@ Para ativar uma skill, você pode solicitar explicitamente (ex: "Atue como o Dat
 *   **Capacidades:** Clean Code, Detecção de Bugs, Segurança (OWASP), Performance.
 *   **Uso:** "Revise este PR" ou "Encontre vulnerabilidades neste código".
 
+### [Copywriting Expert Pro](./skills/copywriting_expert_pro/SKILL.md)
+**Papel**: Redator Publicitário e Especialista em Persuasão
+**Capacidades**: Copy para Vendas (AIDA/PAS), E-mail Marketing, Headlines, Storytelling.
+
+### [Browser Automation Expert Pro](./skills/browser_automation_expert_pro/SKILL.md)
+**Papel**: Engenheiro de Automação Web (SDET)
+**Capacidades**: Scraping (Puppeteer/Playwright), Navegação Headless, Extração de Dados, Bots.
+
+### [PDF Expert Pro](./skills/pdf_expert_pro/SKILL.md)
+**Papel**: Especialista em Documentos PDF
+**Capacidades**: OCR, Geração de Relatórios, Manipulação (Split/Merge), Formulários.
+
+### [Document Expert Pro](./skills/document_expert_pro/SKILL.md)
+**Papel**: Especialista em Processamento de Texto (Doc/Docx)
+**Capacidades**: Automação de Word, Templates Dinâmicos, Conversão de Formatos, Regex.
+
+### [Spreadsheet Expert Pro](./skills/spreadsheet_expert_pro/SKILL.md)
+**Papel**: Mestre em Excel e Google Sheets
+**Capacidades**: Fórmulas Avançadas, Macros (VBA/Apps Script), Pivot Tables, Análise de Dados.
+
+### [Network & Infrastructure Expert Pro](./skills/network_infra_expert_pro/SKILL.md)
+**Papel**: Engenheiro de Redes e Infraestrutura
+**Capacidades**: Protocolos (TCP/IP), DNS, Cloud Networking (AWS/Azure), Debugging de Conectividade.
+
+### [SEO Expert Pro](./skills/seo_expert_pro/SKILL.md)
+**Papel**: Estrategista de SEO (Search Engine Optimization)
+**Capacidades**: Auditoria Técnica, Pesquisa de Palavras-chave, Link Building, Core Web Vitals.
+
+### [Paid Traffic Expert Pro](./skills/paid_traffic_expert_pro/SKILL.md)
+**Papel**: Gestor de Tráfego Pago (Ads)
+**Capacidades**: Google Ads, Meta Ads, Otimização de ROI/ROAS, Estratégia de Campanhas.
+
+### [MCP Expert Pro](./skills/mcp_expert_pro/SKILL.md)
+**Papel**: Engenheiro de Protocolo de Contexto de Modelo
+**Capacidades**: Criação de Servidores MCP, Configuração de Ferramentas, Integração com Claude/Cursor.
+
 ---
 
 ## 🇺🇸 English (US)
@@ -228,11 +264,59 @@ To activate a skill, you can explicitly request it (e.g., "Act as the Database E
 *   **Capabilities:** Clean Code, Bug Detection, Security (OWASP).
 *   **Usage:** "Review this PR" or "Find vulnerabilities in this code."
 
+#### 21. [Copywriting Expert Pro](./skills/copywriting_expert_pro/SKILL.md)
+*   **Role:** Copywriter and Persuasion Specialist.
+*   **Capabilities:** Sales Copy, Email Marketing, Headlines.
+*   **Usage:** "Write a sales page" or "Create 5 hooks."
+
+#### 22. [Browser Automation Expert Pro](./skills/browser_automation_expert_pro/SKILL.md)
+*   **Role:** Automation Engineer (SDET).
+*   **Capabilities:** Web Scraping, Headless Navigation, Bots (Puppeteer).
+*   **Usage:** "Scrape this site" or "Automate login."
+
+#### 23. [PDF Expert Pro](./skills/pdf_expert_pro/SKILL.md)
+*   **Role:** PDF Document Specialist.
+*   **Capabilities:** OCR, Report Generation, Splitting/Merging.
+*   **Usage:** "Merge these PDFs" or "Extract text from image."
+
+#### 24. [Document Expert Pro](./skills/document_expert_pro/SKILL.md)
+*   **Role:** Word Processor Specialist.
+*   **Capabilities:** Docx Automation, Templating, Conversion.
+*   **Usage:** "Create contracts from template" or "Convert to PDF."
+
+#### 25. [Spreadsheet Expert Pro](./skills/spreadsheet_expert_pro/SKILL.md)
+*   **Role:** Excel Master and Data Modeler.
+*   **Capabilities:** Advanced Formulas, VBA Macros, Pivot Tables.
+*   **Usage:** "Write an XLOOKUP" or "Create a macro."
+
+#### 26. [Network & Infrastructure Expert Pro](./skills/network_infra_expert_pro/SKILL.md)
+*   **Role:** Network Engineer.
+*   **Capabilities:** TCP/IP, DNS, Cloud Networking, Debugging.
+*   **Usage:** "Debug my ping" or "Explain subnet mask."
+
+#### 27. [SEO Expert Pro](./skills/seo_expert_pro/SKILL.md)
+*   **Role:** SEO Strategist.
+*   **Capabilities:** Technical Audit, Keyword Research, content optimization.
+*   **Usage:** "Audit my site" or "Find keywords."
+
+#### 28. [Paid Traffic Expert Pro](./skills/paid_traffic_expert_pro/SKILL.md)
+*   **Role:** Ads Manager (PPC).
+*   **Capabilities:** Google Ads, Meta Ads, ROI Optimization.
+*   **Usage:** "Create an ad campaign" or "Optimize CPC."
+
+#### 29. [MCP Expert Pro](./skills/mcp_expert_pro/SKILL.md)
+*   **Role:** Model Context Protocol Engineer.
+*   **Capabilities:** Server Creation, Tool Config, Integration.
+*   **Usage:** "Create an MCP server" or "Debug tool connection."
+
 ---
 
 ## 🇪🇸 Español
 
-Este repositorio alberga **Habilidades Antigravity (Skills)** avanzadas, diseñadas para transformar su asistente de IA en especialistas de nivel senior en diversas áreas. Cada habilidad contiene instrucciones detalladas.
+Este repositorio alberga **Habilidades Antigravity (Skills)** avanzadas.
+
+<truncated... previous spanish section>
+
 
 ### Cómo Usar
 Para activar una habilidad, solicítela explícitamente (ej: "Actúa como el Experto en Bases de Datos") o haga una pregunta compleja sobre el dominio.
