@@ -1,202 +1,336 @@
-# Habilidades PRM Google Antigravity
+# PRM Google Antigravity Skills
 
-Este repositório abriga Habilidades Antigravity avançadas, projetadas para automação de nível empresarial e geração de ecossistemas.
+[🇧🇷 Português](#-português-brasil) | [🇺🇸 English](#-english-us) | [🇪🇸 Español](#-español)
 
-## Habilidades Disponíveis
+---
 
-### [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
+## 🇧🇷 Português (Brasil)
 
-**Papel**: Meta-Habilidade Empresarial Suprema (SkillS)
+Este repositório abriga **Habilidades Antigravity (Skills)** avançadas, projetadas para transformar seu assistente de IA em especialistas de nível sênior em diversas áreas. Cada skill contém instruções detalhadas (prompts de sistema) para guiar o comportamento da IA.
 
-**Capacidades**:
-- Geração Autônoma de Ecossistema de Habilidades
-- Governança e Orquestração
-- Escalonamento Dinâmico de Capacidades
-- Gerenciamento de Ciclo de Vida Ponta a Ponta
+### Como Usar
+Para ativar uma skill, você pode solicitar explicitamente (ex: "Atue como o Database Expert") ou fazer uma pergunta complexa relacionada ao domínio, e o sistema deve carregar o contexto apropriado se configurado com ferramentas de "Skill Loader".
 
-**Uso**:
-Ative esta habilidade quando precisar projetar e implementar sistemas complexos, ecossistemas de agentes ou plataformas empresariais a partir de prompts mínimos.
+### Lista de Habilidades
 
-### [Database Expert Pro](./skills/database_expert_pro/SKILL.md)
+#### 1. [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
+*   **Papel:** Meta-Habilidade para criação de ecossistemas de agentes.
+*   **Capacidades:** Gera arquiteturas completas de multi-agentes, governança, e documentação de novos sistemas.
+*   **Uso:** "Crie um ecossistema de agentes para gerenciar uma frota de drones."
 
-**Papel**: Especialista de Banco de Dados de Elite (DBRE/Architect)
+#### 2. [Database Expert Pro](./skills/database_expert_pro/SKILL.md)
+*   **Papel:** Engenheiro de Banco de Dados (DBA/DBRE) e Arquiteto.
+*   **Capacidades:** Modelagem SQL/NoSQL, Tuning de Performance, Migrações e Segurança de Dados.
+*   **Uso:** "Otimize esta query lenta" ou "Modele o banco para um E-commerce".
 
-**Capacidades**:
-- Design e Modelagem (SQL, NoSQL, ERD)
-- Otimização de Performance e Queries Complexas
-- Administração, Segurança e Migração (ETL)
-- Tuning de Índices e Troubleshooting
+#### 3. [Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)
+*   **Papel:** Arquiteto Front-end e Engenheiro de UI (React, Vue, CSS).
+*   **Capacidades:** Componentes acessíveis (a11y), Performance (Core Web Vitals), Animações e Design Systems.
+*   **Uso:** "Crie um componente de Navbar responsivo" ou "Melhore o LCP do meu site".
 
-**Uso**:
-Ative esta habilidade para desenhar esquemas, corrigir queries lentas, planejar migrações ou auditar a segurança do seu banco de dados.
+#### 4. [Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)
+*   **Papel:** Engenheiro de Backend e Arquiteto de Software (Node, Python, Go).
+*   **Capacidades:** Design de APIs (REST/GraphQL), Microsserviços, Segurança (Auth) e Escalabilidade.
+*   **Uso:** "Desenhe uma API segura de login" ou "Como escalar este serviço com Docker?".
 
-### [Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)
+#### 5. [Git Expert Pro](./skills/git_expert_pro/SKILL.md)
+*   **Papel:** Especialista em Controle de Versão e GitHub.
+*   **Capacidades:** Resolução de conflitos complexos, Rebase, Branching Strategy e Hooks.
+*   **Uso:** "Resolva este conflito de merge" ou "Limpe o histórico do repositório".
 
-**Papel**: Arquiteto Front-end e UI/UX Engineer (React, Vue, Moderna CSS)
+#### 6. [CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)
+*   **Papel:** Engenheiro DevOps e de Release.
+*   **Capacidades:** Pipelines de Automação (GitHub Actions), Deploy Blue/Green, Infraestrutura como Código.
+*   **Uso:** "Crie um pipeline de deploy para AWS" ou "Otimize o tempo de build".
 
-**Capacidades**:
-- Design de Componentes Pixel-Perfect e Acessíveis (a11y)
-- Otimização de Performance (Core Web Vitals, Bundle Size)
-- Animações Fluidas e Interfaces Responsivas
-- Integração com APIs e Gerenciamento de Estado Avançado
+#### 7. [UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)
+*   **Papel:** Designer de Produto e Interface.
+*   **Capacidades:** Prototipagem (Figma), Pesquisa com Usuário, Design Visual e Auditoria de Usabilidade.
+*   **Uso:** "Desenhe a tela de checkout" ou "Quais cores usar para uma marca de saúde?".
 
-**Uso**:
-Ative esta habilidade para criar interfaces ricas, resolver problemas de CSS, otimizar renderizações React ou implementar Design Systems.
+#### 8. [Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)
+*   **Papel:** Líder Técnico e Mentor.
+*   **Capacidades:** Decisões de Arquitetura (ADRs), Mentoria de Juniores, Code Review Culture, Gestão de Dívida Técnica.
+*   **Uso:** "Escreva um RFC para essa tecnologia" ou "Como mentorar meu time?".
 
-### [Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)
+#### 9. [Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)
+*   **Papel:** Gerente de Projetos e Agile Coach.
+*   **Capacidades:** Planejamento de Sprints, Gestão de Riscos, Roadmaps, Standups e Retrospectivas.
+*   **Uso:** "Organize este backlog" ou "Crie um plano de lançamento para Q3".
 
-**Papel**: Engenheiro Principal de Backend e Arquiteto de Sistemas (Node.js, Python, Go)
+#### 10. [Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)
+*   **Papel:** Gerente de Produto (PM) e Estrategista.
+*   **Capacidades:** Visão de Produto, Priorização (RICE), Definição de MVP, Análise de Métricas (KPIs).
+*   **Uso:** "Escreva um PRD para a feature X" ou "Priorize estas funcionalidades".
 
-**Capacidades**:
-- Design de APIs Seguras (REST, GraphQL, gRPC)
-- Arquitetura de Microsserviços e Event-Driven
-- Implementação de Autenticação/Autorização (OAuth2, JWT)
-- Otimização de Servidores e Infraestrutura (Docker, K8s)
+#### 11. [Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)
+*   **Papel:** Cientista da Computação e Engenheiro Principal.
+*   **Capacidades:** Algoritmos (Big O), Estruturas de Dados, Design Patterns (GoF), Baixo Nível.
+*   **Uso:** "Otimize a complexidade deste algoritmo" ou "Refatore usando SOLID".
 
-**Uso**:
-Ative esta habilidade para criar APIs escaláveis, configurar microsserviços, resolver problemas de concorrência ou planejar infraestrutura.
+#### 12. [Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)
+*   **Papel:** Cientista de Dados e Engenheiro de ML.
+*   **Capacidades:** Modelagem Preditiva (ML), Análise Estatística, Limpeza de Dados, Visualização (Python/R).
+*   **Uso:** "Crie um modelo de previsão de churn" ou "Analise a correlação destes dados".
 
-### [Git Expert Pro](./skills/git_expert_pro/SKILL.md)
+#### 13. [Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)
+*   **Papel:** Analista de BI e Dados.
+*   **Capacidades:** SQL Avançado, Dashboards (Tableau/PowerBI), Métricas de Negócio, Storytelling.
+*   **Uso:** "Escreva uma query para retenção mensal" ou "Explique a queda nas vendas".
 
-**Papel**: Engenheiro DevOps e Líder de Versionamento (Git, GitHub Actions)
+#### 14. [Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)
+*   **Papel:** Analista de Suporte Nível 3.
+*   **Capacidades:** Troubleshooting, Análise de Logs, Resposta a Clientes, Gestão de Incidentes.
+*   **Uso:** "Analise este erro nos logs" ou "Escreva uma resposta para o cliente iritado".
 
-**Capacidades**:
-- Gerenciamento Avançado de Histórico (Rebase, Cherry-Pick, Reflog)
-- Automação via GitHub Actions (CI/CD Pipelines)
-- Segurança de Commits e Resolução de Conflitos Complexos
-- Governança de Repositórios (Hooks, Branch Protection, LFS)
+#### 15. [Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)
+*   **Papel:** Analista de Sistemas e Requisitos.
+*   **Capacidades:** Modelagem UML/BPMN, Especificação de Requisitos (Funcionais/Não-Funcionais), Integração.
+*   **Uso:** "Faça um diagrama de sequência para o login" ou "Levante os requisitos do sistema".
 
-**Uso**:
-Ative esta habilidade para criar pipelines de deploy, recuperar commits perdidos, limpar histórico ou configurar workflows de times.
+#### 16. [Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)
+*   **Papel:** Contador Sênior e Auditor.
+*   **Capacidades:** Lançamentos Contábeis, DRE/Balanço, Depreciação, Impostos e Compliance.
+*   **Uso:** "Como lançar essa despesa?" ou "Prepare um DRE simples".
 
-### [CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)
+#### 17. [Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)
+*   **Papel:** Analista Financeiro e CFO.
+*   **Capacidades:** Valuation (DCF), Análise de Investimentos (VPL/TIR), Modelagem Financeira.
+*   **Uso:** "Calcule o VPL deste projeto" ou "Avalie o valor desta empresa".
 
-**Papel**: Arquiteto Principal de Pipelines e Engenharia de Releases
+#### 18. [Portuguese (BR) Language Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)
+*   **Papel:** Linguista e Revisor (PT-BR).
+*   **Capacidades:** Gramática Normativa, Revisão de Texto, Tradução, Adaptação Cultural.
+*   **Uso:** "Revise este texto formal" ou "Traduza mantendo o tom".
 
-**Capacidades**:
-- Design de Pipelines Multi-Estágio (CI/CD)
-- Deploy Automatizado com Estratégias Seguras (Blue/Green, Canary)
-- Orquestração de Contêineres e Infraestrutura como Código (IaC)
-- Integração de Segurança e Compliance (DevSecOps)
+#### 19. [English (US) Language Expert Pro](./skills/english_us_expert_pro/SKILL.md)
+*   **Papel:** Editor Nativo (EN-US).
+*   **Capacidades:** Inglês para Negócios, Vocabulário Avançado, Correção Nativa.
+*   **Uso:** "Torne este email mais profissional" ou "Corrija minha gramática".
 
-**Uso**:
-Ative esta habilidade para criar workflows de deploy, otimizar builds lentos, configurar ambientes de teste ou implementar GitOps.
+#### 20. [Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)
+*   **Papel:** Auditor de Código e Segurança.
+*   **Capacidades:** Clean Code, Detecção de Bugs, Segurança (OWASP), Performance.
+*   **Uso:** "Revise este PR" ou "Encontre vulnerabilidades neste código".
 
-### [UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)
+---
 
-**Papel**: Designer de Interface Digital e Pesquisador de Experiência do Usuário (UI/UX)
+## 🇺🇸 English (US)
 
-**Capacidades**:
-- Design de Interfaces Modernas, Limpas e Intuitivas (Figma, Adobe XD)
-- Pesquisa de Usuário (User Journey, Personas, Usability Testing)
-- Prototipagem de Alta Fidelidade e Wireframing
-- Auditoria de Acessibilidade (WCAG) e Design Systems
+This repository houses advanced **Antigravity Skills**, designed to transform your AI assistant into senior-level specialists across various domains. Each skill contains detailed instructions (system prompts) to guide the AI's behavior.
 
-**Uso**:
-Ative esta habilidade para desenhar telas, escolher paletas de cores, melhorar fluxos de navegação ou criticar layouts existentes.
+### How to Use
+To activate a skill, you can explicitly request it (e.g., "Act as the Database Expert") or ask a complex domain-specific question.
 
-### [Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)
+### Skills List
 
-**Papel**: Liderança Técnica, Mentor e Estrategista de Engenharia
+#### 1. [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
+*   **Role:** Meta-Skill for agent ecosystem creation.
+*   **Capabilities:** Generates full multi-agent architectures, governance, and documentation.
+*   **Usage:** "Create an agent ecosystem to manage a drone fleet."
 
-**Capacidades**:
-- Tomada de Decisão Arquitetural (Build vs Buy, Stack Selection)
-- Definição de Processos de Engenharia (Code Reviews, RFCs, Agile)
-- Gestão de Dívida Técnica e Mentorias
-- Tradução Técnica para Stakeholders (Comunicação)
+#### 2. [Database Expert Pro](./skills/database_expert_pro/SKILL.md)
+*   **Role:** Database Engineer (DBA/DBRE) and Architect.
+*   **Capabilities:** SQL/NoSQL Modeling, Performance Tuning, Migrations, Data Security.
+*   **Usage:** "Optimize this slow query" or "Model a database for E-commerce."
 
-**Uso**:
-Ative esta habilidade para validar arquiteturas, resolver conflitos técnicos, definir padrões de código ou planejar roadmaps.
+#### 3. [Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)
+*   **Role:** Frontend Architect and UI Engineer.
+*   **Capabilities:** Accessible components (a11y), Performance (Core Web Vitals), Animations.
+*   **Usage:** "Create a responsive Navbar" or "Improve my site's LCP."
 
-### [Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)
+#### 4. [Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)
+*   **Role:** Backend Engineer and Software Architect.
+*   **Capabilities:** API Design, Microservices, Security (Auth), Scalability.
+*   **Usage:** "Design a secure login API" or "How to scale this service?".
 
-**Papel**: Gerente de Projetos Sênior e Agile Coach (Scrum, Kanban)
+#### 5. [Git Expert Pro](./skills/git_expert_pro/SKILL.md)
+*   **Role:** Version Control and GitHub Specialist.
+*   **Capabilities:** Conflict Resolution, Rebase, Branching Strategies, Hooks.
+*   **Usage:** "Fix this merge conflict" or "Clean up repository history."
 
-**Capacidades**:
-- Planejamento de Sprints, Roadmaps e Cronogramas
-- Gestão de Riscos, Escopo e Comunicação com Stakeholders
-- Facilitação de Cerônias Ágeis (Dailies, Planning, Retro)
-- OKRs e Monitoramento de Indicadores de Projeto
+#### 6. [CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)
+*   **Role:** DevOps and Release Engineer.
+*   **Capabilities:** Automation Pipelines (GitHub Actions), Blue/Green Deploy, IaC.
+*   **Usage:** "Create a deployment pipeline for AWS" or "Optimize build time."
 
-**Uso**:
-Ative esta habilidade para organizar tarefas, criar planos de projeto, gerenciar riscos ou melhorar a produtividade do time.
+#### 7. [UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)
+*   **Role:** Product and Interface Designer.
+*   **Capabilities:** Prototyping, User Research, Visual Design, Usability Audits.
+*   **Usage:** "Design a checkout screen" or "Pick a color palette for a health brand."
 
-### [Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)
+#### 8. [Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)
+*   **Role:** Technical Lead and Mentor.
+*   **Capabilities:** Architecture Decisions, Mentorship, Code Review Culture.
+*   **Usage:** "Write an RFC for this tech" or "How to mentor my team?".
 
-**Papel**: Gerente de Produto e Estrategista (PM)
+#### 9. [Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)
+*   **Role:** Project Manager and Agile Coach.
+*   **Capabilities:** Sprint Planning, Risk Management, Roadmaps.
+*   **Usage:** "Organize this backlog" or "Create a Q3 launch plan."
 
-**Capacidades**:
-- Definição de Visão de Produto, MVP e Métricas de Sucesso (KPIs)
-- Escrita de Histórias de Usuário (User Stories) e PRDs
-- Priorização de Backlog (RICE, Kano) e Validação de Hipóteses
-- Análise de Mercado (Competidores) e Feedback de Usuário
+#### 10. [Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)
+*   **Role:** Product Manager (PM) and Strategist.
+*   **Capabilities:** Product Vision, Prioritization (RICE), MVP Definition, Metrics.
+*   **Usage:** "Write a PRD for feature X" or "Prioritize these items."
 
-**Uso**:
-Ative esta habilidade para definir o "Quê" e o "Porquê" construir, priorizar funcionalidades e alinhar estratégia de negócios.
+#### 11. [Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)
+*   **Role:** Computer Scientist and Principal Engineer.
+*   **Capabilities:** Algorithms (Big O), Data Structures, Design Patterns.
+*   **Usage:** "Optimize this algorithm" or "Refactor using SOLID."
 
-### [Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)
+#### 12. [Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)
+*   **Role:** Data Scientist and ML Engineer.
+*   **Capabilities:** Predictive Modeling, Statistical Analysis, Data Cleaning.
+*   **Usage:** "Create a churn prediction model" or "Analyze correlation."
 
-**Papel**: Engenheiro de Software Principal e Cientista da Computação
+#### 13. [Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)
+*   **Role:** BI and Data Analyst.
+*   **Capabilities:** Advanced SQL, Dashboards, Business Metrics.
+*   **Usage:** "Write a query for monthly retention" or "Explain sales drop."
 
-**Capacidades**:
-- Design Patterns Avançados (SOLID, GoF) e Refatoração
-- Análise de Complexidade de Algoritmos (Big O) e Estruturas de Dados
-- Sistemas Distribuídos e Otimização de Performance (Concorrência)
-- Segurança de Código e Programação Defensiva (C++, Rust, Java)
+#### 14. [Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)
+*   **Role:** Tier 3 Support Analyst.
+*   **Capabilities:** Troubleshooting, Log Analysis, Incident Management.
+*   **Usage:** "Analyze this error log" or "Write a reply to an angry customer."
 
-**Uso**:
-Ative esta habilidade para resolver problemas de baixo nível, otimizar algoritmos lentos, refatorar código complexo ou desenhar sistemas robustos.
+#### 15. [Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)
+*   **Role:** Systems Analyst and Requirements Engineer.
+*   **Capabilities:** UML/BPMN Modeling, Requirements Specification, Integration.
+*   **Usage:** "Draw a sequence diagram" or "Gather system requirements."
 
-### [Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)
+#### 16. [Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)
+*   **Role:** Senior Accountant and Auditor.
+*   **Capabilities:** Bookkeeping, Financial Statements, Tax Compliance.
+*   **Usage:** "How to record this expense?" or "Prepare a Balance Sheet."
 
-**Papel**: Cientista de Dados Líder e Engenheiro de Machine Learning
+#### 17. [Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)
+*   **Role:** Financial Analyst and CFO.
+*   **Capabilities:** Valuation (DCF), Investment Analysis, Financial Modeling.
+*   **Usage:** "Calculate NPV for this project" or "Valuate this company."
 
-**Capacidades**:
-- Análise Exploratória de Dados (EDA) e Visualização (Matplotlib, Seaborn)
-- Modelagem Preditiva (Regressão, Classificação, Clustering) com Scikit-Learn
-- Testes Estatísticos (A/B Testing, Inferência Bayesiana)
-- Deploy de Modelos (MLOps) e Pipelines de Dados
+#### 18. [Portuguese (BR) Language Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)
+*   **Role:** Linguist and Editor (PT-BR).
+*   **Capabilities:** Grammar, Proofreading, Translation, Cultural Nuance.
+*   **Usage:** "Proofread this formal text" or "Translate maintaining tone."
 
-**Uso**:
-Ative esta habilidade para analisar tendências, criar modelos de previsão, limpar datasets ou validar experimentos estatísticos.
+#### 19. [English (US) Language Expert Pro](./skills/english_us_expert_pro/SKILL.md)
+*   **Role:** Native Editor (EN-US).
+*   **Capabilities:** Business English, Advanced Vocabulary, Native Correction.
+*   **Usage:** "Make this email professional" or "Fix my grammar."
 
-### [Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)
+#### 20. [Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)
+*   **Role:** Code Auditor and Security Engineer.
+*   **Capabilities:** Clean Code, Bug Detection, Security (OWASP).
+*   **Usage:** "Review this PR" or "Find vulnerabilities in this code."
 
-**Papel**: Analista de Dados Sênior e Especialista em Business Intelligence (BI)
+---
 
-**Capacidades**:
-- Query Avançada (SQL CTEs, Windows Functions) para Insights de Negócio
-- Criação e Interpretação de Dashboards (PowerBI, Looker, Tableau)
-- Definição de KPIs (LTV, Churn, CAC) e Storytelling com Dados
-- Análise de Causas Raíz e Tendências de Mercado
+## 🇪🇸 Español
 
-**Uso**:
-Ative esta habilidade para responder perguntas de negócio ("Por que caiu a receita?"), criar relatórios ou otimizar queries SQL complexas.
+Este repositorio alberga **Habilidades Antigravity (Skills)** avanzadas, diseñadas para transformar su asistente de IA en especialistas de nivel senior en diversas áreas. Cada habilidad contiene instrucciones detalladas.
 
-### [Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)
-**Papel**: Engenheiro de Suporte e Gestão de Incidentes
-**Capacidades**: Troubleshooting, Análise de Logs, Gestão de Tickets (SLA), Atendimento ao Cliente.
+### Cómo Usar
+Para activar una habilidad, solicítela explícitamente (ej: "Actúa como el Experto en Bases de Datos") o haga una pregunta compleja sobre el dominio.
 
-### [Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)
-**Papel**: Analista de Sistemas e Engenheiro de Requisitos
-**Capacidades**: Modelagem UML/BPMN, Especificação Funcional, Mapeamento de Processos, Integração de Sistemas.
+### Lista de Habilidades
 
-### [Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)
-**Papel**: Contador Sênior e Auditor (CPA)
-**Capacidades**: Balanços e DREs, Compliance Tributário, Reconciliação Bancária, Normas Contábeis (IFRS/GAAP).
+#### 1. [Skill Forge Expert Pro](./skills/skill_forge_expert_pro/SKILL.md)
+*   **Rol:** Meta-Habilidad para crear ecosistemas de agentes.
+*   **Capacidades:** Genera arquitecturas multi-agente, gobernanza y documentación.
+*   **Uso:** "Crea un ecosistema de agentes para drones."
 
-### [Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)
-**Papel**: Analista Financeiro e CFO (CFA)
-**Capacidades**: Valuation (DCF), Modelagem Financeira, Análise de Investimentos, Gestão de Fluxo de Caixa.
+#### 2. [Database Expert Pro](./skills/database_expert_pro/SKILL.md)
+*   **Rol:** Ingeniero de Bases de Datos (DBA) y Arquitecto.
+*   **Capacidades:** Modelado SQL/NoSQL, Optimización de Rendimiento, Migraciones.
+*   **Uso:** "Optimiza esta consulta lenta" o "Modela una base de datos de E-commerce."
 
-### [Portuguese (BR) Language Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)
-**Papel**: Revisor, Tradutor e Linguista (PT-BR)
-**Capacidades**: Gramática Normativa, Novo Acordo Ortográfico, Redação Corporativa, Tradução e Localização.
+#### 3. [Frontend Expert Pro](./skills/frontend_expert_pro/SKILL.md)
+*   **Rol:** Arquitecto Front-end e Ingeniero de UI.
+*   **Capacidades:** Componentes accesibles, Rendimiento, Animaciones.
+*   **Uso:** "Crea un componente de Navbar" o "Mejora el LCP de mi sitio."
 
-### [English (US) Language Expert Pro](./skills/english_us_expert_pro/SKILL.md)
-**Papel**: Editor Nativo de Inglês Americano (EN-US)
-**Capacidades**: Business English, Redação Acadêmica, Correção Gramatical, Vocabulário e Idiomas Nativos.
+#### 4. [Backend Expert Pro](./skills/backend_expert_pro/SKILL.md)
+*   **Rol:** Ingeniero Backend y Arquitecto de Software.
+*   **Capacidades:** Diseño de APIs, Microservicios, Seguridad y Escalabilidad.
+*   **Uso:** "Diseña una API segura" o "¿Cómo escalar este servicio?".
 
-### [Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)
-**Papel**: Engenheiro de Staff e Auditor de Código
-**Capacidades**: Análise Estática de Segurança (SAST), Auditoria de Clean Code, Detecção de Bugs e Vulnerabilidades.
+#### 5. [Git Expert Pro](./skills/git_expert_pro/SKILL.md)
+*   **Rol:** Especialista en Control de Versiones y GitHub.
+*   **Capacidades:** Resolución de conflictos, Rebase, Estrategias de ramas.
+*   **Uso:** "Arregla este conflicto de fusión" o "Limpia el historial."
+
+#### 6. [CI/CD Master Pro](./skills/cicd_master_pro/SKILL.md)
+*   **Rol:** Ingeniero DevOps y de Releases.
+*   **Capacidades:** Pipelines de Automatización, Despliegue Blue/Green, IaC.
+*   **Uso:** "Crea un pipeline para AWS" u "Optimiza el tiempo de compilación."
+
+#### 7. [UI/UX Expert Pro](./skills/ui_ux_expert_pro/SKILL.md)
+*   **Rol:** Diseñador de Producto e Interfaz.
+*   **Capacidades:** Prototipado, Investigación de Usuarios, Diseño Visual.
+*   **Uso:** "Diseña una pantalla de pago" o "Elige una paleta de colores."
+
+#### 8. [Tech Lead Expert Pro](./skills/tech_lead_expert_pro/SKILL.md)
+*   **Rol:** Líder Técnico y Mentor.
+*   **Capacidades:** Decisiones de Arquitectura, Mentoría, Cultura de Revisión de Código.
+*   **Uso:** "Escribe un RFC" o "¿Cómo mentorizar a mi equipo?".
+
+#### 9. [Project Management Expert Pro](./skills/project_management_expert_pro/SKILL.md)
+*   **Rol:** Gerente de Proyectos y Agile Coach.
+*   **Capacidades:** Planificación de Sprints, Gestión de Riesgos, Hojas de Ruta.
+*   **Uso:** "Organiza este backlog" o "Crea un plan de lanzamiento."
+
+#### 10. [Product Management Expert Pro](./skills/product_management_expert_pro/SKILL.md)
+*   **Rol:** Gerente de Producto (PM) y Estratega.
+*   **Capacidades:** Visión del Producto, Priorización, Definición de MVP.
+*   **Uso:** "Escribe un PRD" o "Prioriza estas funcionalidades."
+
+#### 11. [Software Engineering Expert Pro](./skills/software_engineering_expert_pro/SKILL.md)
+*   **Rol:** Científico de la Computación e Ingeniero Principal.
+*   **Capacidades:** Algoritmos, Estructuras de Datos, Patrones de Diseño.
+*   **Uso:** "Optimiza este algoritmo" o "Refactoriza usando SOLID."
+
+#### 12. [Data Science Expert Pro](./skills/data_science_expert_pro/SKILL.md)
+*   **Rol:** Científico de Datos e Ingeniero de ML.
+*   **Capacidades:** Modelado Predictivo, Análisis Estadístico, Limpieza de Datos.
+*   **Uso:** "Crea un modelo de predicción" o "Analiza la correlación."
+
+#### 13. [Data Analytics Expert Pro](./skills/data_analytics_expert_pro/SKILL.md)
+*   **Rol:** Analista de BI y Datos.
+*   **Capacidades:** SQL Avanzado, Dashboards, Métricas de Negocio.
+*   **Uso:** "Escribe una consulta de retención" o "Explica la caída en ventas."
+
+#### 14. [Technical Support Expert Pro](./skills/tech_support_expert_pro/SKILL.md)
+*   **Rol:** Analista de Soporte Nivel 3.
+*   **Capacidades:** Solución de Problemas, Análisis de Logs, Gestión de Incidentes.
+*   **Uso:** "Analiza este error" o "Escribe una respuesta al cliente."
+
+#### 15. [Systems Analyst Expert Pro](./skills/systems_analyst_expert_pro/SKILL.md)
+*   **Rol:** Analista de Sistemas e Ingeniero de Requisitos.
+*   **Capacidades:** Modelado UML/BPMN, Especificación de Requisitos, Integración.
+*   **Uso:** "Haz un diagrama de secuencia" o "Recopila requisitos."
+
+#### 16. [Accounting Expert Pro](./skills/accounting_expert_pro/SKILL.md)
+*   **Rol:** Contador Senior y Auditor.
+*   **Capacidades:** Contabilidad, Estados Financieros, Cumplimiento Fiscal.
+*   **Uso:** "¿Cómo registrar este gasto?" o "Prepara un Balance."
+
+#### 17. [Finance Expert Pro](./skills/finance_expert_pro/SKILL.md)
+*   **Rol:** Analista Financiero y CFO.
+*   **Capacidades:** Valoración (DCF), Análisis de Inversiones, Modelado Financiero.
+*   **Uso:** "Calcula el VAN de este proyecto" o "Valora esta empresa."
+
+#### 18. [Portuguese (BR) Language Expert Pro](./skills/portuguese_br_expert_pro/SKILL.md)
+*   **Rol:** Lingüista y Editor (PT-BR).
+*   **Capacidades:** Gramática, Revisión, Traducción.
+*   **Uso:** "Revisa este texto formal" o "Traduce manteniendo el tono."
+
+#### 19. [English (US) Language Expert Pro](./skills/english_us_expert_pro/SKILL.md)
+*   **Rol:** Editor Nativo (EN-US).
+*   **Capacidades:** Inglés de Negocios, Vocabulario Avanzado.
+*   **Uso:** "Haz este correo profesional" o "Corrige mi gramática."
+
+#### 20. [Code Review Expert Pro](./skills/code_review_expert_pro/SKILL.md)
+*   **Rol:** Auditor de Código y Seguridad.
+*   **Capacidades:** Código Limpio, Detección de Errores, Seguridad.
+*   **Uso:** "Revisa este PR" o "Encuentra vulnerabilidades."
