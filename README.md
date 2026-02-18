@@ -1,4 +1,4 @@
-# PRM Google Antigravity Skills
+# Parametrus-Google-Antigravity-Skills
 
 [🇧🇷 Português](#-português-brasil) | [🇺🇸 English](#-english-us) | [🇪🇸 Español](#-español)
 

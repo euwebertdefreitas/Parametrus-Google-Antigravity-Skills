@@ -7,7 +7,7 @@ import { Providers } from '@/components/Providers';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Antigravity Skills Manager',
+  title: 'Parametrus Antigravity Skills Manager',
   description: 'Manage your AI agent skills.',
 };
 
