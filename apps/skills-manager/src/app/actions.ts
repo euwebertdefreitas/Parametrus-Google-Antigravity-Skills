@@ -5,10 +5,30 @@ import path from 'path';
 import matter from 'gray-matter';
 import os from 'os';
 
-// This is likely running server-side, so process.cwd is good.
 const SKILLS_ROOT = path.join(process.cwd(), '../../skills');
-const WORKSPACE_AGENTS_ROOT = path.join(process.cwd(), '../../.agent/skills');
-const GLOBAL_HOME_ROOT = path.join(os.homedir(), '.antigravity/skills');
+const WORKSPACE_ROOT = path.join(process.cwd(), '../../.agent'); // Base for workspace specific skills
+const HOME_DIR = os.homedir();
+
+// Maps for provider paths (Global and Workspace)
+// For simplicity, we assume consistent naming:
+const PROVIDER_PATHS: Record<string, { global: string; workspace: string }> = {
+    antigravity: {
+        global: path.join(HOME_DIR, '.antigravity/skills'),
+        workspace: path.join(WORKSPACE_ROOT, 'skills/antigravity'),
+    },
+    anthropic: {
+        global: path.join(HOME_DIR, '.anthropic/skills'),
+        workspace: path.join(WORKSPACE_ROOT, 'skills/anthropic'),
+    },
+    openai: {
+        global: path.join(HOME_DIR, '.openai/skills'),
+        workspace: path.join(WORKSPACE_ROOT, 'skills/openai'),
+    }
+};
+
+// Default fallback for legacy compatibility (Antigravity assumes .agent/skills directly without subfolder usually, but let's standardize)
+// Actually, to not break existing Antigravity installation, let's map it correctly based on previous setup:
+PROVIDER_PATHS.antigravity.workspace = path.join(process.cwd(), '../../.agent/skills');
 
 export async function getSkills() {
     const dirs = await fs.readdir(SKILLS_ROOT);
@@ -21,45 +41,47 @@ export async function getSkills() {
         const content = await fs.readFile(skillPath, 'utf8');
         const { data } = matter(content);
 
-        const isWorkspaceInstalled = fs.existsSync(path.join(WORKSPACE_AGENTS_ROOT, dir));
-        const isGlobalInstalled = fs.existsSync(path.join(GLOBAL_HOME_ROOT, dir));
+        // Check installation status for ALL providers
+        const installedStatus: Record<string, { global: boolean; workspace: boolean }> = {};
+
+        for (const [provider, paths] of Object.entries(PROVIDER_PATHS)) {
+            installedStatus[provider] = {
+                global: fs.existsSync(path.join(paths.global, dir)),
+                workspace: fs.existsSync(path.join(paths.workspace, dir)),
+            };
+        }
 
         results.push({
             id: dir,
             name: data.name || dir,
             description: data.description || 'No description.',
-            installed: {
-                workspace: isWorkspaceInstalled,
-                global: isGlobalInstalled,
-            }
+            installed: installedStatus
         });
     }
     return results;
 }
 
-export async function installSkill(skillId: string, location: 'global' | 'workspace') {
+export async function installSkill(skillId: string, location: 'global' | 'workspace', provider: string) {
     const source = path.join(SKILLS_ROOT, skillId);
     if (!fs.existsSync(source)) throw new Error('Skill not found');
 
-    let target = '';
-    if (location === 'global') {
-        target = path.join(GLOBAL_HOME_ROOT, skillId);
-    } else {
-        target = path.join(WORKSPACE_AGENTS_ROOT, skillId);
-    }
+    const providerPath = PROVIDER_PATHS[provider];
+    if (!providerPath) throw new Error('Invalid provider');
+
+    const targetRoot = location === 'global' ? providerPath.global : providerPath.workspace;
+    const target = path.join(targetRoot, skillId);
 
     await fs.ensureDir(target);
     await fs.copy(source, target);
     return { success: true };
 }
 
-export async function uninstallSkill(skillId: string, location: 'global' | 'workspace') {
-    let target = '';
-    if (location === 'global') {
-        target = path.join(GLOBAL_HOME_ROOT, skillId);
-    } else {
-        target = path.join(WORKSPACE_AGENTS_ROOT, skillId);
-    }
+export async function uninstallSkill(skillId: string, location: 'global' | 'workspace', provider: string) {
+    const providerPath = PROVIDER_PATHS[provider];
+    if (!providerPath) throw new Error('Invalid provider');
+
+    const targetRoot = location === 'global' ? providerPath.global : providerPath.workspace;
+    const target = path.join(targetRoot, skillId);
 
     if (fs.existsSync(target)) {
         await fs.remove(target);

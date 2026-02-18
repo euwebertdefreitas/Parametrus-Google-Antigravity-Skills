@@ -2,8 +2,8 @@ export type Language = 'en' | 'pt' | 'es';
 
 export const translations = {
     en: {
-        title: "Antigravity Skill Manager",
-        subtitle: "Manage your AI agent's capabilities across global and workspace scopes.",
+        title: "Agente Skill Manager",
+        subtitle: "Manage your AI agent's capabilities across platforms.",
         filterPlaceholder: "Filter skills...",
         global: "Global",
         workspace: "Workspace",
@@ -14,11 +14,17 @@ export const translations = {
         language: "Language",
         light: "Light",
         dark: "Dark",
-        system: "System"
+        system: "System",
+        provider: "Target AI",
+        providers: {
+            antigravity: "Gemini Antigravity",
+            anthropic: "Anthropic Claude",
+            openai: "OpenAI ChatGPT"
+        }
     },
     pt: {
-        title: "Gerenciador de Habilidades Antigravity",
-        subtitle: "Gerencie as capacidades do seu agente de IA nos escopos global e de workspace.",
+        title: "Gerenciador de Habilidades de Agente",
+        subtitle: "Gerencie as capacidades do seu agente de IA em várias plataformas.",
         filterPlaceholder: "Filtrar habilidades...",
         global: "Global",
         workspace: "Workspace",
@@ -29,11 +35,17 @@ export const translations = {
         language: "Idioma",
         light: "Claro",
         dark: "Escuro",
-        system: "Sistema"
+        system: "Sistema",
+        provider: "IA Alvo",
+        providers: {
+            antigravity: "Gemini Antigravity",
+            anthropic: "Anthropic Claude",
+            openai: "OpenAI ChatGPT"
+        }
     },
     es: {
-        title: "Gestor de Habilidades Antigravity",
-        subtitle: "Gestione las capacidades de su agente de IA en ámbitos globales y de espacio de trabajo.",
+        title: "Gestor de Habilidades de Agente",
+        subtitle: "Gestione las capacidades de su agente de IA en múltiples plataformas.",
         filterPlaceholder: "Filtrar habilidades...",
         global: "Global",
         workspace: "Espacio de trabajo",
@@ -44,6 +56,12 @@ export const translations = {
         language: "Idioma",
         light: "Claro",
         dark: "Oscuro",
-        system: "Sistema"
+        system: "Sistema",
+        provider: "IA Objetivo",
+        providers: {
+            antigravity: "Gemini Antigravity",
+            anthropic: "Anthropic Claude",
+            openai: "OpenAI ChatGPT"
+        }
     }
 };

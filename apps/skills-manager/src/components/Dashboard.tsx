@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Loader2, Globe, Monitor } from 'lucide-react';
+import { Search, Loader2, Globe, Monitor, Box } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { installSkill, uninstallSkill } from '@/app/actions';
 
@@ -10,11 +10,13 @@ type Skill = {
     id: string;
     name: string;
     description: string;
-    installed: {
+    installed: Record<string, {
         global: boolean;
         workspace: boolean;
-    };
+    }>
 };
+
+type Provider = 'antigravity' | 'anthropic' | 'openai';
 
 export function Dashboard({
     initialSkills
@@ -23,6 +25,7 @@ export function Dashboard({
 }) {
     const [skills, setSkills] = useState(initialSkills);
     const [query, setQuery] = useState('');
+    const [provider, setProvider] = useState<Provider>('antigravity');
     const [isPending, startTransition] = useTransition();
     const { t } = useLanguage();
 
@@ -32,14 +35,20 @@ export function Dashboard({
     );
 
     async function toggleInstall(skillId: string, scope: 'global' | 'workspace') {
-        const isInstalled = skills.find(s => s.id === skillId)?.installed[scope];
+        const isInstalled = skills.find(s => s.id === skillId)?.installed[provider]?.[scope];
 
         // Optimistic Update
         setSkills(prev => prev.map(s => {
             if (s.id === skillId) {
                 return {
                     ...s,
-                    installed: { ...s.installed, [scope]: !isInstalled }
+                    installed: {
+                        ...s.installed,
+                        [provider]: {
+                            ...s.installed[provider],
+                            [scope]: !isInstalled
+                        }
+                    }
                 };
             }
             return s;
@@ -48,9 +57,9 @@ export function Dashboard({
         startTransition(async () => {
             try {
                 if (isInstalled) {
-                    await uninstallSkill(skillId, scope);
+                    await uninstallSkill(skillId, scope, provider);
                 } else {
-                    await installSkill(skillId, scope);
+                    await installSkill(skillId, scope, provider);
                 }
             } catch (err) {
                 // Rollback
@@ -58,7 +67,13 @@ export function Dashboard({
                     if (s.id === skillId) {
                         return {
                             ...s,
-                            installed: { ...s.installed, [scope]: isInstalled }
+                            installed: {
+                                ...s.installed,
+                                [provider]: {
+                                    ...s.installed[provider],
+                                    [scope]: isInstalled
+                                }
+                            }
                         };
                     }
                     return s;
@@ -70,6 +85,22 @@ export function Dashboard({
 
     return (
         <div className="space-y-8">
+            {/* Provider Selector */}
+            <div className="flex justify-center gap-4 mb-8">
+                {(['antigravity', 'anthropic', 'openai'] as const).map((p) => (
+                    <button
+                        key={p}
+                        onClick={() => setProvider(p)}
+                        className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${provider === p
+                                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105'
+                                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700'
+                            }`}
+                    >
+                        {t.providers?.[p] || p}
+                    </button>
+                ))}
+            </div>
+
             {/* Search Filter */}
             <div className="relative max-w-lg mx-auto">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -90,7 +121,7 @@ export function Dashboard({
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <AnimatePresence>
+                <AnimatePresence mode='popLayout'>
                     {filtered.map(skill => (
                         <motion.div
                             key={skill.id}
@@ -118,11 +149,11 @@ export function Dashboard({
                                     </div>
                                     <button
                                         onClick={() => toggleInstall(skill.id, 'global')}
-                                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 ${skill.installed.global ? "bg-cyan-600" : "bg-slate-300 dark:bg-slate-700"
+                                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 ${skill.installed[provider]?.global ? "bg-cyan-600" : "bg-slate-300 dark:bg-slate-700"
                                             }`}
                                     >
                                         <span
-                                            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${skill.installed.global ? "translate-x-6" : "translate-x-1"
+                                            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${skill.installed[provider]?.global ? "translate-x-6" : "translate-x-1"
                                                 }`}
                                         />
                                     </button>
@@ -136,11 +167,11 @@ export function Dashboard({
                                     </div>
                                     <button
                                         onClick={() => toggleInstall(skill.id, 'workspace')}
-                                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 ${skill.installed.workspace ? "bg-purple-600" : "bg-slate-300 dark:bg-slate-700"
+                                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 ${skill.installed[provider]?.workspace ? "bg-purple-600" : "bg-slate-300 dark:bg-slate-700"
                                             }`}
                                     >
                                         <span
-                                            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${skill.installed.workspace ? "translate-x-6" : "translate-x-1"
+                                            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${skill.installed[provider]?.workspace ? "translate-x-6" : "translate-x-1"
                                                 }`}
                                         />
                                     </button>
