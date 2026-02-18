@@ -10,7 +10,7 @@
 
 ## 🇧🇷 Português (Brasil)
 
-Este repositório abriga **Habilidades Antigravity (Skills)** avançadas, projetadas para transformar seu assistente de IA em especialistas de nível sênior em diversas áreas. Cada skill contém instruções detalhadas (prompts de sistema) para guiar o comportamento da IA.
+Este repositório abriga **Habilidades (Skills)** avançadas, projetadas para transformar seu assistente de IA em especialistas de nível sênior em diversas áreas. Cada skill contém instruções detalhadas (prompts de sistema) para guiar o comportamento da IA.
 
 ### Como Usar
 Para ativar uma skill, você pode solicitar explicitamente (ex: "Atue como o Database Expert") ou fazer uma pergunta complexa relacionada ao domínio, e o sistema deve carregar o contexto apropriado se configurado com ferramentas de "Skill Loader".
