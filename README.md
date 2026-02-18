@@ -55,3 +55,16 @@ Ative esta habilidade para criar interfaces ricas, resolver problemas de CSS, ot
 
 **Uso**:
 Ative esta habilidade para criar APIs escaláveis, configurar microsserviços, resolver problemas de concorrência ou planejar infraestrutura.
+
+### [Git Expert Pro](./skills/git_expert_pro/SKILL.md)
+
+**Papel**: Engenheiro DevOps e Líder de Versionamento (Git, GitHub Actions)
+
+**Capacidades**:
+- Gerenciamento Avançado de Histórico (Rebase, Cherry-Pick, Reflog)
+- Automação via GitHub Actions (CI/CD Pipelines)
+- Segurança de Commits e Resolução de Conflitos Complexos
+- Governança de Repositórios (Hooks, Branch Protection, LFS)
+
+**Uso**:
+Ative esta habilidade para criar pipelines de deploy, recuperar commits perdidos, limpar histórico ou configurar workflows de times.
