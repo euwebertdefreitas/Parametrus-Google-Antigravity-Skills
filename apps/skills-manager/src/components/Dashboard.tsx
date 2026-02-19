@@ -25,6 +25,24 @@ type Skill = {
 
 type Provider = 'antigravity' | 'anthropic' | 'openai';
 
+// --- Categories ---
+const CATEGORIES: Record<string, string[]> = {
+    leadership: ['orchestrator_expert_pro', 'skill_forge_expert_pro'],
+    tech: ['software_engineering_expert_pro', 'frontend_expert_pro', 'backend_expert_pro', 'database_expert_pro', 'git_expert_pro', 'cicd_master_pro', 'tech_lead_expert_pro', 'code_review_expert_pro', 'mcp_expert_pro', 'browser_automation_expert_pro', 'systems_analyst_expert_pro', 'tech_support_expert_pro', 'network_infra_expert_pro'],
+    data: ['data_science_expert_pro', 'data_analytics_expert_pro', 'spreadsheet_expert_pro'],
+    business: ['product_management_expert_pro', 'project_management_expert_pro', 'finance_expert_pro', 'accounting_expert_pro'],
+    marketing: ['ui_ux_expert_pro', 'seo_expert_pro', 'paid_traffic_expert_pro', 'copywriting_expert_pro'],
+    health: ['medical_expert_pro', 'nursing_expert_pro', 'pharmaceutical_expert_pro', 'philips_tasy_expert_pro'],
+    docs: ['pdf_expert_pro', 'document_expert_pro', 'english_us_expert_pro', 'portuguese_br_expert_pro']
+};
+
+function getCategory(skillId: string): string {
+    for (const [cat, skills] of Object.entries(CATEGORIES)) {
+        if (skills.includes(skillId)) return cat;
+    }
+    return 'other';
+}
+
 // --- Helper Components ---
 
 function getSkillIcon(name: string) {
@@ -54,7 +72,7 @@ function StatusIndicator({ status, label, t }: { status: InstallStatus, label: s
     return (
         <div className="flex items-center gap-2 text-xs font-medium transition-all duration-300 group">
             <div className={`w-2 h-2 rounded-full ${color} animate-pulse`} />
-            <span className={`${textColor}`}>{label}</span>
+            <span className={`${textColor}`}>{label}: {text}</span>
         </div>
     );
 }
@@ -93,6 +111,23 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
         return matchesQuery;
     });
 
+    const groupedSkills = useMemo(() => {
+        const groups: Record<string, Skill[]> = {};
+        // Initialize groups order
+        Object.keys(CATEGORIES).forEach(k => groups[k] = []);
+        groups['other'] = [];
+
+        filtered.forEach(skill => {
+            const cat = getCategory(skill.id);
+            if (!groups[cat]) groups[cat] = [];
+            groups[cat].push(skill);
+        });
+
+        // Remove empty groups
+        return Object.entries(groups).filter(([_, list]) => list.length > 0);
+    }, [filtered]);
+
+
     // --- Actions ---
 
     async function toggleInstall(skillId: string, scope: 'global' | 'workspace') {
@@ -109,7 +144,7 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
                             ...s.providerStatus[provider],
                             [scope]: {
                                 installed: !isInstalled,
-                                valid: !isInstalled,
+                                valid: !isInstalled, // Assume valid on optimistic install
                                 lastModified: new Date().toISOString()
                             }
                         }
@@ -178,8 +213,8 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
                                 key={p}
                                 onClick={() => setProvider(p)}
                                 className={`relative z-10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${provider === p
-                                        ? 'text-white shadow-lg'
-                                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                                    ? 'text-white shadow-lg'
+                                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                                     }`}
                             >
                                 {provider === p && (
@@ -233,7 +268,7 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
                                     onClick={() => setFilterState(f)}
                                     className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${filterState === f ? 'bg-white dark:bg-slate-700 shadow-sm text-cyan-600 dark:text-cyan-400' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}
                                 >
-                                    {f.charAt(0).toUpperCase() + f.slice(1)}
+                                    {t.filters?.[f]}
                                 </button>
                             ))}
                         </div>
@@ -258,84 +293,90 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
                 </div>
             </div>
 
-            {/* Grid */}
-            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <AnimatePresence mode='popLayout'>
-                    {filtered.map((skill, index) => {
-                        const status = skill.providerStatus[provider];
-                        const isAnyInstalled = status?.global.installed || status?.workspace.installed;
+            {groupedSkills.map(([category, skills]) => (
+                <div key={category} className="space-y-4">
+                    <h3 className="text-xl font-bold text-slate-700 dark:text-slate-300 pl-2 border-l-4 border-cyan-500/50">
+                        {t.categories?.[category] || category}
+                    </h3>
+                    <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <AnimatePresence mode='popLayout'>
+                            {skills.map((skill, index) => {
+                                const status = skill.providerStatus[provider];
+                                const isAnyInstalled = status?.global.installed || status?.workspace.installed;
 
-                        return (
-                            <motion.div
-                                key={skill.id}
-                                layout
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className={`glass-card rounded-2xl p-5 flex flex-col justify-between group h-full relative overflow-hidden`}
-                            >
-                                {/* Decorative Gradient Blur */}
-                                {isAnyInstalled && (
-                                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
-                                )}
-
-                                <div>
-                                    <div className="flex justify-between items-start mb-4 relative z-10">
-                                        <div className="p-2.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl shadow-inner">
-                                            {getSkillIcon(skill.name)}
-                                        </div>
+                                return (
+                                    <motion.div
+                                        key={skill.id}
+                                        layout
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.95 }}
+                                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                                        className={`glass-card rounded-2xl p-5 flex flex-col justify-between group h-full relative overflow-hidden`}
+                                    >
+                                        {/* Decorative Gradient Blur */}
                                         {isAnyInstalled && (
-                                            <div className="bg-cyan-50 dark:bg-cyan-900/20 p-1.5 rounded-full">
-                                                <FileCheck className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-                                            </div>
+                                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
                                         )}
-                                    </div>
 
-                                    <h3 className="font-bold text-slate-800 dark:text-slate-100 mb-2 truncate group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                                        {skill.name}
-                                    </h3>
-                                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3 mb-6 min-h-[3rem]">
-                                        {skill.description}
-                                    </p>
-                                </div>
-
-                                <div className="space-y-3 relative z-10">
-                                    {/* Action Row: Global */}
-                                    <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800/50">
-                                        <div className="flex flex-col">
-                                            <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
-                                                <Globe className="w-3 h-3" /> {t.global}
+                                        <div>
+                                            <div className="flex justify-between items-start mb-4 relative z-10">
+                                                <div className="p-2.5 bg-slate-50 dark:bg-slate-800/80 rounded-xl shadow-inner">
+                                                    {getSkillIcon(skill.name)}
+                                                </div>
+                                                {isAnyInstalled && (
+                                                    <div className="bg-cyan-50 dark:bg-cyan-900/20 p-1.5 rounded-full">
+                                                        <FileCheck className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                                                    </div>
+                                                )}
                                             </div>
-                                            <StatusIndicator status={status?.global} label={t.global} t={t} />
-                                        </div>
-                                        <ToggleSwitch
-                                            isOn={status?.global.installed}
-                                            onToggle={() => toggleInstall(skill.id, 'global')}
-                                            activeColor="bg-cyan-500"
-                                        />
-                                    </div>
 
-                                    {/* Action Row: Workspace */}
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex flex-col">
-                                            <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
-                                                <Monitor className="w-3 h-3" /> {t.workspace}
-                                            </div>
-                                            <StatusIndicator status={status?.workspace} label={t.workspace} t={t} />
+                                            <h3 className="font-bold text-slate-800 dark:text-slate-100 mb-2 truncate group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                                                {skill.name}
+                                            </h3>
+                                            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3 mb-6 min-h-[3rem]">
+                                                {skill.description}
+                                            </p>
                                         </div>
-                                        <ToggleSwitch
-                                            isOn={status?.workspace.installed}
-                                            onToggle={() => toggleInstall(skill.id, 'workspace')}
-                                            activeColor="bg-purple-500"
-                                        />
-                                    </div>
-                                </div>
-                            </motion.div>
-                        );
-                    })}
-                </AnimatePresence>
-            </motion.div>
+
+                                        <div className="space-y-3 relative z-10">
+                                            {/* Action Row: Global */}
+                                            <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800/50">
+                                                <div className="flex flex-col">
+                                                    <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                                                        <Globe className="w-3 h-3" /> {t.global}
+                                                    </div>
+                                                    <StatusIndicator status={status?.global} label={t.global} t={t} />
+                                                </div>
+                                                <ToggleSwitch
+                                                    isOn={status?.global.installed}
+                                                    onToggle={() => toggleInstall(skill.id, 'global')}
+                                                    activeColor="bg-cyan-500"
+                                                />
+                                            </div>
+
+                                            {/* Action Row: Workspace */}
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex flex-col">
+                                                    <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                                                        <Monitor className="w-3 h-3" /> {t.workspace}
+                                                    </div>
+                                                    <StatusIndicator status={status?.workspace} label={t.workspace} t={t} />
+                                                </div>
+                                                <ToggleSwitch
+                                                    isOn={status?.workspace.installed}
+                                                    onToggle={() => toggleInstall(skill.id, 'workspace')}
+                                                    activeColor="bg-purple-500"
+                                                />
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </AnimatePresence>
+                    </motion.div>
+                </div>
+            ))}
 
             {filtered.length === 0 && (
                 <div className="flex flex-col items-center justify-center py-32 text-slate-400">

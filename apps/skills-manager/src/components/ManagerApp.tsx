@@ -23,7 +23,7 @@ export function ManagerApp({ initialSkills }: { initialSkills: any[] }) {
                         <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-slate-400">
                             {t.title}
                         </h1>
-                        <p className="text-xs text-slate-500 font-medium tracking-wide">PARAMETRUS // ANTIGRAVITY</p>
+                        <p className="text-xs text-slate-500 font-medium tracking-wide">PARAMETRUS // IA SKILLS</p>
                     </div>
                 </div>
 

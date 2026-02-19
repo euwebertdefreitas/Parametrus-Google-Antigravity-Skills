@@ -4,6 +4,7 @@
   "description": "Enterprise Grade Antigravity Skills for Google Deepmind.",
   "scripts": {
     "manager": "cd apps/skills-manager && npm run dev",
+    "build": "cd apps/skills-manager && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
