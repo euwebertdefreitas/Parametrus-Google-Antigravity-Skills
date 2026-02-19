@@ -233,12 +233,12 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
                     <div className="flex items-center gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
                         <div className="flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-cyan-500" />
-                            {stats.installed} / {stats.total} Active
+                            {stats.installed} / {stats.total} {t.active}
                         </div>
                         <div className="w-px h-4 bg-slate-300 dark:bg-slate-700" />
                         <div className="flex items-center gap-2">
                             <Activity className="w-4 h-4 text-emerald-500" />
-                            {stats.percentage}% Coverage
+                            {stats.percentage}% {t.coverage}
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@ export function Dashboard({ initialSkills }: { initialSkills: Skill[] }) {
             {groupedSkills.map(([category, skills]) => (
                 <div key={category} className="space-y-4">
                     <h3 className="text-xl font-bold text-slate-700 dark:text-slate-300 pl-2 border-l-4 border-cyan-500/50">
-                        {t.categories?.[category] || category}
+                        {t.categories?.[category as keyof typeof t.categories] || category}
                     </h3>
                     <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         <AnimatePresence mode='popLayout'>
