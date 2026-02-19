@@ -3,8 +3,11 @@
 [🇧🇷 Português](#-português-brasil) | [🇺🇸 English](#-english-us) | [🇪🇸 Español](#-español)
 
 > **🚀 General**: This project houses specialized AI Skills.
+> 
 > **🚀 Skill Manager App**: Para gerenciar suas skills visualmente, rode `npm run manager` na raiz deste projeto.
+> 
 > **🚀 Skill Manager App**: To manage your skills visually, run `npm run manager` in the project root.
+> 
 > **🚀 Skill Manager App**: Para gestionar sus habilidades visualmente, ejecute `npm run manager` en la raíz.
 
 ---
